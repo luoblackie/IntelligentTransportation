@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:theme="@style/AppTheme.NoActionBar"
+    >
+
+    <!--头部搜索栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        >
+
+        <ImageView
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/sousuo"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+            <EditText android:id="@+id/citySearchDialog_searchEdit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/searchDialogEditTitle"
+                android:textSize="20sp"
+                android:background="@drawable/edit_blank_bg"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                >
+
+                <ImageView android:id="@+id/citySearchDialog_editTextCancleBT"
+                    android:visibility="gone"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:src="@drawable/quxiao"
+                    android:layout_marginRight="5dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+        <Button android:id="@+id/citySearchDialog_cancleBT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/searchDialogCancleBTText"
+            android:background="#0000"
+            android:textSize="20sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/citySearchDialog_locationBT"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center_vertical"
+        >
+
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:src="@drawable/diwei"
+            android:layout_marginTop="2dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="定位至当前城市"
+            android:textSize="20sp"
+            />
+
+
+    </LinearLayout>
+
+    <ListView android:id="@+id/citySearchDialog_LV"
+        android:visibility="gone"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"></ListView>
+
+</LinearLayout>

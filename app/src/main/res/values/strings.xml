@@ -1,0 +1,47 @@
+<resources>
+    <string name="main_me">我</string>
+    <string name="main_query">查询</string>
+    <string name="main_home">主页</string>
+    <string name="app_name">智慧交通</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="thanks_01">特别鸣谢\n（排名不分先后）</string>
+    <string name="thanks_02">阿里巴巴图贴库\nhttps://www.iconfont.cn/</string>
+    <string name="thanks_03">开发人员\n万芳 王志 李响 艾萌</string>
+    <string name="thanks_00">知道了</string>
+    <string name="qwerr">主页</string>
+    <string name="ac01_query">违章查询</string>
+
+    <string name="searchDialogEditTitle">搜索城市</string>
+    <string name="searchDialogCancleBTText">取消</string>
+
+    <!--汽车item-->
+    <string-array name="arr_carType">
+        <item>小型汽车</item>
+        <item>大型汽车</item>
+        <item>新能源小车</item>
+        <item>新能源大车</item>
+        <item>香港入境车</item>
+        <item>澳门入境车</item>
+        <item>使馆汽车</item>
+        <item>领馆汽车</item>
+        <item>境外汽车</item>
+        <item>外籍汽车</item>
+        <item>两三轮摩托车</item>
+        <item>轻便摩托车</item>
+        <item>使馆摩托车</item>
+        <item>领馆摩托车</item>
+        <item>境外摩托车</item>
+        <item>外籍摩托车</item>
+        <item>农用运输车</item>
+        <item>拖拉机</item>
+        <item>挂车</item>
+        <item>教练汽车</item>
+        <item>教练摩托车</item>
+    </string-array>
+</resources>
+

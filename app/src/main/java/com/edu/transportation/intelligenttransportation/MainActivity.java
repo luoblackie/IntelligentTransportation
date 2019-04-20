@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity{
         };
 
         ConvertTools.getPermission(MainActivity.this, permissions,
-                "定位权限", "APP需要定位相关权限，拒绝可能限制部分功能，影响您的体验");
+                "定位权限", "APP需要定位的相关权限，拒绝可能限制部分功能，影响您的体验");
     }
 
 

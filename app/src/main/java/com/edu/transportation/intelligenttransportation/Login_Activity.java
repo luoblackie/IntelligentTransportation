@@ -4,8 +4,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -32,13 +35,41 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
     private CheckBox save_info;
     private CheckBox auto_login;
 
+    /*toolBar*/
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         context = getBaseContext();
         initView();
+
+        /*设置toolBar*/
+        initToolBar();
+
         setAuto_login();
+    }
+
+    private void initToolBar() {
+        setSupportActionBar(toolbar);
+        ActionBar actionBar = getSupportActionBar();
+        if (actionBar != null){
+            actionBar.setHomeButtonEnabled(true);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     public void setAuto_login(){
@@ -48,6 +79,8 @@ public class Login_Activity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void initView() {
+        toolbar = (Toolbar) findViewById(R.id.activityToolBar);
+
         userName = (EditText) findViewById(R.id.userName);
         pwd = (EditText) findViewById(R.id.pwd);
         login_button = (Button) findViewById(R.id.login_button);

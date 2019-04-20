@@ -5,6 +5,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.LevelListDrawable;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -50,6 +51,7 @@ public class ActivityNewsDetail extends AppCompatActivity {
         setContentView(R.layout.ativity_news_details);
 
         toolBar = (Toolbar) findViewById(R.id.ativity_news_details_toolBar);
+        toolBar.setBackgroundColor(0x00000000);
         setSupportActionBar(toolBar);
 
         convertTools = new ConvertTools(this);
@@ -192,6 +194,8 @@ public class ActivityNewsDetail extends AppCompatActivity {
                 finish();
                 break;
         }
+
+        toolBar.setBackgroundColor(ContextCompat.getColor(this, R.color.colorPrimary));
 
         return true;
     }

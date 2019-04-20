@@ -283,7 +283,9 @@ public class MainActivity extends AppCompatActivity{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        keyBackCounterInitHandle.removeCallbacks(keyBackCounterInitRunnable);
+        if (keyBackCounterInitHandle != null){
+            keyBackCounterInitHandle.removeCallbacks(keyBackCounterInitRunnable);
+        }
     }
 
 /*
